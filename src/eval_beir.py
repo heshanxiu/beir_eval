@@ -34,8 +34,8 @@ class BEIRSbertModel:
 # NOTE: this version only works for max agg in SPLADE, so the two directories below !
 # If you want to use old weights ("../weights/flops_best" and "../weights/flops_efficient") for BEIR benchmark,
 # change the SPLADE aggregation in SPLADE forward in models.py
-model_type_or_dir = "output/train_adv_bi-encoder-mnrl-distilbert-base-uncased-margin_3.0-lambda0.1-uniq0.05-2022-10-06_08-02-47/gen_iter_23/0_TransformerClassifier" 
-outfile = "beir_perf_0.1_iter24.json"
+model_type_or_dir = "output/train_adv_bi-encoder-mnrl-distilbert-base-uncased-margin_3.0-lambda0.1-uniq0.05-2022-10-06_08-02-47/gen_iter_14/0_TransformerClassifier" 
+outfile = "beir_perf_0.1_0.05_iter14.json"
 
 # loading model and tokenizer:
 word_embedding_model = model.TransformerClassifier(model_type_or_dir, max_seq_length=500)

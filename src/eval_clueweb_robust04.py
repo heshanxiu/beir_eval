@@ -14,7 +14,7 @@ import pytrec_eval
 import model
 from sentence_transformers.util import cos_sim
 all_mrr_scores = []
-model_name = "output/train_adv_bi-encoder-mnrl-distilbert-base-uncased-margin_3.0-lambda0.1-uniq0.05-2022-10-06_08-02-47/gen_iter_16/0_TransformerClassifier" 
+model_name = "output/train_adv_bi-encoder-mnrl-distilbert-base-uncased-margin_3.0-lambda0.1-uniq0.05-2022-10-06_08-02-47/gen_iter_14/0_TransformerClassifier" 
 
 mrr_at_k = 10
 dataset = "robust"
@@ -119,6 +119,6 @@ metrics = ["ndcg_cut_20", "P_20"]
 for VALIDATION_METRIC in metrics:
     trec_eval = pytrec_eval.RelevanceEvaluator(qrels, {VALIDATION_METRIC})
     eval_scores = trec_eval.evaluate(run_scores)
-    print(VALIDATION_METRIC, np.mean([d[VALIDATION_METRIC] for d in eval_scores.values()]))
+    print(dataset, VALIDATION_METRIC, np.mean([d[VALIDATION_METRIC] for d in eval_scores.values()]))
     #print(len(eval_scores), eval_scores)
 #print("mrr", np.mean(all_mrr_scores))
