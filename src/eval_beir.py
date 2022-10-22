@@ -53,7 +53,8 @@ data_list = ["dbpedia-entity", "fiqa", "nq", "hotpotqa", "nfcorpus", "trec-covid
 data_list2 = ["arguana", "climate-fever", "quora", "scidocs", "scifact"]
 
 # for dataset in ["trec-covid", "arguana", "dbpedia-entity", "scidocs", "scifact", "webis-touche2020"]: #, "nfcorpus", "quora", "climate-fever", "fiqa", "fever", "hotpotqa", "nq"]:
-for dataset in ["nfcorpus", "quora", "climate-fever", "fiqa", "fever", "hotpotqa", "nq"]:
+# for dataset in ["nfcorpus", "quora", "climate-fever", "fiqa", "hotpotqa", "nq", "fever"]:
+for dataset in ["hotpotqa", "nq"]:
     print("start:", dataset)
     url = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/{}.zip".format(dataset)
     
