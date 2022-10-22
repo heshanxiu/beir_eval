@@ -49,7 +49,11 @@ tokenizer = AutoTokenizer.from_pretrained(model_type_or_dir)
 beir_model = BEIRSbertModel(model, tokenizer)
 all_results = dict()
 
-for dataset in ["trec-covid", "arguana", "dbpedia-entity", "scidocs", "scifact", "webis-touche2020"]: #, "nfcorpus", "quora", "climate-fever", "fiqa", "fever", "hotpotqa", "nq"]:
+data_list = ["dbpedia-entity", "fiqa", "nq", "hotpotqa", "nfcorpus", "trec-covid", "webis-touche2020"]
+data_list2 = ["arguana", "climate-fever", "quora", "scidocs", "scifact"]
+
+# for dataset in ["trec-covid", "arguana", "dbpedia-entity", "scidocs", "scifact", "webis-touche2020"]: #, "nfcorpus", "quora", "climate-fever", "fiqa", "fever", "hotpotqa", "nq"]:
+for dataset in ["nfcorpus", "quora", "climate-fever", "fiqa", "fever", "hotpotqa", "nq"]:
     print("start:", dataset)
     url = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/{}.zip".format(dataset)
     
